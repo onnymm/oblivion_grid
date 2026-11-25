@@ -122,6 +122,7 @@ class Model:
 
         name: Mapped[str] = mapped_column(String(255))
         galaxy_life_id: Mapped[str] = mapped_column(String(255))
+        xp_level: Mapped[int]
         profile_picture: Mapped[str | None] = mapped_column(Text)
         alliance_id: Mapped[int | None] = mapped_column(ForeignKey(f"{MODEL_NAME.ALLIANCES}.id"))
 
